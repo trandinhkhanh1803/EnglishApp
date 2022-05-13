@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.aoneenglish.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/HocTuVung"
+        android:name="com.example.aoneenglish.Learning_vocabulary.Learning_Voca_Activity"
+        android:label="Học từ vựng"
+        tools:layout="@layout/activity_learn_voca" />
+
+    <activity
+        android:id="@+id/DSTuVung"
+        android:name="com.example.aoneenglish.Learning_vocabulary.List_Voca_Activity"
+        android:label="Vocabulary list"
+        tools:layout="@layout/activity_vocabulary" />
+
+    <!--    <activity-->
+    <!--        android:id="@+id/SapXepCau"-->
+    <!--        android:label="Word Matters"-->
+    <!--        android:name="com.example.projectse.sapxepcau.SapXepCauActivity"-->
+    <!--        tools:layout="@layout/activity_sapxepcau"-->
+    <!--        />-->
+    <activity
+        android:id="@+id/ThongTinTaiKhoan"
+        android:name="com.example.aoneenglish.account.Infor_Acc_Activity"
+        android:label="Thong Tin Tai Khhoan"
+        tools:layout="@layout/activity_infor_acc" />
+    <activity
+        android:id="@+id/TracNghiem"
+        android:name="com.example.aoneenglish.multiple_choice.Activity_multiple_choice"
+        android:label="Trac Nghiem"
+        tools:layout="@layout/activity_multiple_choice" />
+    <activity
+        android:id="@+id/DienKhuyet"
+        android:name="com.example.aoneenglish.Fill_in_the_word.Fill_in_the_word_Activity"
+        android:label="Trac Nghiem"
+        tools:layout="@layout/activity_fill_in_the_word" />
+    <activity
+        android:id="@+id/LuyenNghe"
+        android:name="com.example.aoneenglish.Listening.Listening_Activity"
+        android:label="Luyen Nghe"
+        tools:layout="@layout/activity_listening"/>
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.aoneenglish.ui.home.LogoutFragment"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

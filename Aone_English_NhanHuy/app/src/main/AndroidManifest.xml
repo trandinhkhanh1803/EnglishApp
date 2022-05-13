@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aoneenglish">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.aoneenglish">
+        <activity android:name="com.example.aoneenglish.account.RankingActivity" />
+        <activity android:name="com.example.aoneenglish.account.ForgotPasswordActivity" />
+        <activity android:name="com.example.aoneenglish.account.Infor_Acc_Activity" />
+
+        <activity android:name="com.example.aoneenglish.multiple_choice.FinishQuizActivity" />
+        <activity android:name="com.example.aoneenglish.multiple_choice.QuizActivity" />
+        <activity android:name="com.example.aoneenglish.multiple_choice.Activity_multiple_choice" />
+
+        <activity android:name="com.example.aoneenglish.Fill_in_the_word.Finish_DK_Activity" />
+        <activity android:name="com.example.aoneenglish.Fill_in_the_word.Fill_Blanks_Activity" />
+        <activity android:name="com.example.aoneenglish.Fill_in_the_word.Fill_in_the_word_Activity" />
+        <activity android:name="com.example.aoneenglish.Learning_vocabulary.Word_Matters_Activity" />le
+
+        <activity android:name="com.example.aoneenglish.Learning_vocabulary.Finish_Learning_VC_Activity" />
+        <activity android:name="com.example.aoneenglish.Learning_vocabulary.List_Voca_Activity" />
+        <activity android:name="com.example.aoneenglish.Learning_vocabulary.Learning_Voca_Activity" />
+
+        <activity android:name=".Listening.Finish_Quiz_LS_Activity" />
+        <activity android:name=".Listening.Listeing_test_Activity" />
+        <activity android:name=".Listening.Listening_Activity" />
+        <activity
+            android:name="com.example.aoneenglish.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.aoneenglish.NoActionBar" />
+        <activity android:name="com.example.aoneenglish.account.Signup" />
+        <activity android:name="com.example.aoneenglish.account.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

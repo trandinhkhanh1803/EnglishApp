@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dstuvung"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".Learning_vocabulary.List_Voca_Activity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_toEndOf="@+id/imgVBackDSTV"
+            android:layout_toRightOf="@+id/imgVBackDSTV"
+            android:text="Vocabulary"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgVBackDSTV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="62dp"
+            android:src="@drawable/ic_person"
+            android:layout_height="62dp"/>
+
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/lgvTuVung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:numColumns="2" />
+
+    <Button
+        android:id="@+id/btnOnTap"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/blue3"
+        android:paddingBottom="10dp"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="@color/lightGrey"
+        android:textSize="20sp" />
+
+</LinearLayout>

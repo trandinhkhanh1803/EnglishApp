@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dstuvung"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="72dp"
+        android:layout_toEndOf="@+id/imgVBackDSTV"
+        android:layout_toRightOf="@+id/imgVBackDSTV"
+        android:text="Fill in the word"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lvdienkhuyet"
+        app:layout_constraintStart_toEndOf="@+id/imgVBackDK" />
+
+    <ListView
+        android:id="@+id/lvdienkhuyet"
+        android:layout_width="398dp"
+        android:layout_height="553dp"
+        android:layout_marginTop="135dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818" />
+
+    <ImageView
+        android:id="@+id/imgVBackDK"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lvdienkhuyet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UseAppTint" />
+</androidx.constraintlayout.widget.ConstraintLayout>

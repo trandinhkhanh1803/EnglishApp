@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_main"
+            android:title="@string/menu_home" />
+        <item
+            android:icon="@drawable/ic_setting"
+            android:title="Setting"/>
+
+    </group>
+    <item android:title="Learning Vocabulary">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="Learn vocabulary"
+                    android:id="@+id/HocTuVung"
+                    android:icon="@drawable/ic_vocabulary"/>
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Testing">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="Multiple-choice"
+                    android:id="@+id/TracNghiem"
+                    android:icon="@drawable/ic_spacefill"/>
+                <item android:title="Sentence arrangement"
+                    android:id="@+id/SapXepCau"
+                    android:icon="@drawable/ic_order"/>
+                <item android:title="Listening"
+                    android:id="@+id/LuyenNghe"
+                    android:icon="@drawable/ic_hearing"/>
+                <item android:title="Review"
+                    android:icon="@drawable/ic_allsubject"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="Account">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="User information"
+                    android:icon="@drawable/ic_person"
+                    android:id="@+id/ThongTinTaiKhoan" />
+
+                <item android:title="Logout"
+                    android:icon="@drawable/ic_logout"
+                    android:id="@+id/logout"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="Designed by Le Quang Huy"/>
+</menu>
