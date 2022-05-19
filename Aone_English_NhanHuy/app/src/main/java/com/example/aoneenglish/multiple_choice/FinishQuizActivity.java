@@ -40,7 +40,7 @@ public class FinishQuizActivity extends AppCompatActivity {
 
         Anhxa();
 
-
+//kiem tra so cau tra loi dung
         if(questiontrue==4){
             txtfinalqtrue.setText(questiontrue + " / " + qcount);
             txtcongrats.setText("Your final result: ");

@@ -91,7 +91,7 @@ public class Fill_Blanks_Activity extends AppCompatActivity {
         });
 
     }
-
+// lay du lieu nguoi dng tu database
     public void LayUser() {
         database = Database.initDatabase(Fill_Blanks_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM User WHERE ID_User = ?", new String[]{String.valueOf(DB.iduser)});
@@ -109,9 +109,7 @@ public class Fill_Blanks_Activity extends AppCompatActivity {
         database = Database.initDatabase(Fill_Blanks_Activity.this, DATABASE_NAME);
         String a = null;
         Cursor cursor = database.rawQuery("SELECT * FROM DienKhuyet WHERE ID_Bo=?", new String[]{String.valueOf(idbo)});
-
         txtquestcountDK.setText("Question: " + (questioncurrent + 1) + "/" + cursor.getCount() + "");
-
         edtAnswerDK.setBackground(this.getResources().getDrawable(R.drawable.bgbtn));
 
 

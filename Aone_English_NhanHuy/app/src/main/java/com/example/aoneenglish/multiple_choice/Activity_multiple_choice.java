@@ -41,7 +41,7 @@ public class Activity_multiple_choice extends AppCompatActivity {
         listView.setAdapter(learnsetAdapter);
         learnsetAdapter.notifyDataSetChanged();
 
-
+    //bat su kien chuyen den QuizActivity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -63,7 +63,7 @@ public class Activity_multiple_choice extends AppCompatActivity {
                 startActivity(quiz);
             }
         });
-
+// quay lai trang home
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +74,7 @@ public class Activity_multiple_choice extends AppCompatActivity {
             }
         });
     }
+    //lay du lieu tu database do ra listview
     private void AddArrayBTN(){
         database= Database.initDatabase(Activity_multiple_choice.this,DATABASE_NAME);
         Cursor cursor=database.rawQuery("SELECT * FROM BoCauHoi",null);

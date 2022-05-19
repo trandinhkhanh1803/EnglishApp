@@ -47,6 +47,7 @@ public class QuizActivity extends AppCompatActivity {
         Anhxa();
 
         LayUser();
+        //nhan du lieu tu Activity_multiple_choice
         Intent intent=getIntent();
         idbo=intent.getIntExtra("Bo",0);
         txttime.setText(" ");
@@ -76,7 +77,7 @@ public class QuizActivity extends AppCompatActivity {
                 countDownTimer.start();
             }
         });
-
+// quay lai trang Activity_multiple_choice
         btnquit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +101,7 @@ public class QuizActivity extends AppCompatActivity {
         btnconfirm=findViewById(R.id.btnconfirmTN);
         btnquit=findViewById(R.id.btnQuitTN);
     }
-
+// add cau tra loi tu RadioButton
     private void AddArrayCTN(){
         database = Database.initDatabase(QuizActivity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM TracNghiem WHERE ID_Bo = ?",new String[]{String.valueOf(idbo)});
@@ -134,6 +135,7 @@ public class QuizActivity extends AppCompatActivity {
         user = new User(Iduser,HoTen,Point,Email,SDT);
     }
 
+    // hien thi so cau tra loi
     public void shownextquestion(int pos, ArrayList<Multiple_choice_questions> multiplechoicequestions){
 
 //        database= Database.initDatabase(QuizActivity.this,DATABASE_NAME);
@@ -194,6 +196,8 @@ public class QuizActivity extends AppCompatActivity {
 
         txtscore.setText("Score: "+score+"");
     }
+
+    // hien thi ket qua cau hoi
     public void showanswer(){
         if(1==answer) {
             btnop1.setBackground(this.getResources().getDrawable(R.drawable.button_2));

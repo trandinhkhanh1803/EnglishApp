@@ -75,7 +75,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         DB = DatabaseAccess.getInstance(getApplicationContext());
         AnhXa();
         LayUser();
-
+// nhan du lieu Learning_Voca_Activity
         Intent intent = getIntent();
         idbo = intent.getIntExtra("idbo", 0);
         DStuvung = new ArrayList<>();
@@ -164,7 +164,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         ListenTV = (ImageButton) findViewById(R.id.ListenTuVung);
         btnquit = (Button) findViewById(R.id.btnQuitHTV);
     }
-
+// lay du lieu user
     public void LayUser() {
         database = Database.initDatabase(Word_Matters_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM User WHERE ID_User = ?", new String[]{String.valueOf(DB.iduser)});
@@ -176,7 +176,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         String SDT = cursor.getString(4);
         user = new User(Iduser, HoTen, Point, Email, SDT);
     }
-
+// them tu vung
     private void AddArrayTV() {
         database = Database.initDatabase(Word_Matters_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM TuVung WHERE ID_Bo = ?", new String[]{String.valueOf(idbo)});
@@ -196,7 +196,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         }
     }
 
-
+// Random và đảo chữ trong phần Vocabulary
     private String[] shuffleArray(String[] ar) {
         Random rnd = new Random();
         for (int i = ar.length - 1; i > 0; i--) {
@@ -208,7 +208,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         return ar;
     }
 
-
+// them  textview vao edit text
     private void addView(LinearLayout viewParent, final String text, final EditText editText) {
         LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -218,7 +218,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         linearLayoutParams.rightMargin = 30;
 
         final TextView textView = new TextView(this);
-
+//format cho textview
         textView.setLayoutParams(linearLayoutParams);
         textView.setBackground(this.getResources().getDrawable(R.drawable.bgpink));
         textView.setTextColor(this.getResources().getColor(R.color.colorPurple));
@@ -227,7 +227,6 @@ public class Word_Matters_Activity extends AppCompatActivity {
         textView.setClickable(true);
         textView.setFocusable(true);
         textView.setTextSize(35);
-
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/FredokaOneRegular.ttf");
 
         textScreen.setTypeface(typeface);
@@ -267,7 +266,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
         LinearLayout linearLayout1 = findViewById(R.id.layoutParent1);
         LinearLayout linearLayout2 = findViewById(R.id.layoutParent2);
         LinearLayout linearLayout3 = findViewById(R.id.layoutParent3);
-
+// kiem tra so tu dung
         if (editText.getText().toString().equals(textAnswer)) {
             if (tu == DStuvung.size()) {
                 score += 5;
@@ -319,7 +318,7 @@ public class Word_Matters_Activity extends AppCompatActivity {
             dem++;
         }
     }
-
+// stop
     private void doStop() {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.stop();

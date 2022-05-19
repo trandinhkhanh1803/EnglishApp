@@ -43,7 +43,8 @@ public class LoginActivity extends AppCompatActivity {
                 String matkhau = edtmatkhau.getText().toString().trim();
 
 
-                // validations for input email and password // check th trong
+                // kiem tra da nhap thong tin chua
+
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(),
                             "Hãy nhập Email của bạn!!",
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                // signin existing user
+                // gui du lieu den firebase, kiem tra dang nhap
 
                 mAuth.signInWithEmailAndPassword(email, matkhau)
                         .addOnCompleteListener(
@@ -95,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        //intent to signup activity
         tvDangky.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //intent to ForgotPassword Activity
         tvforgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
+// anh xa
     private void AnhXa() {
         btnDangnhap = (Button) findViewById(R.id.buttonDangnhap);
         tvDangky = (TextView) findViewById(R.id.textView_register);

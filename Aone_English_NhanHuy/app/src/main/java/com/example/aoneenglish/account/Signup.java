@@ -58,13 +58,14 @@ public class Signup extends AppCompatActivity {
                 String sdt = edtSdt.getText().toString().trim();
                 String matkhau = edtMatKhau.getText().toString().trim();
                 String xacnhanmatkhau = edtXacNhan.getText().toString().trim();
-
+                    //kiem tra nhap thong tin
                 if (hoten.equals("") || email.equals("") || sdt.equals("") || matkhau.equals("")) {
                     Toast.makeText(Signup.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else {
                     if (matkhau.equals(xacnhanmatkhau)) {
                         Boolean kiemtrataikhoan = DB.checktaikhoan(email);
                         if (kiemtrataikhoan == false) {
+                            // gui du lieu len firebase, tao tai khoan
                             mAuth.createUserWithEmailAndPassword(email, matkhau).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -110,7 +111,7 @@ public class Signup extends AppCompatActivity {
             }
         });
     }
-
+// anh xa
     private void AnhXa() {
         tvDangNhap = (TextView) findViewById(R.id.textView_login);
         edtHoTen = (EditText) findViewById(R.id.editTextEmailNav);

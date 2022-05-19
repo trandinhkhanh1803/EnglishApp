@@ -37,6 +37,7 @@ public class RankingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
         AnhXa();
+        //tham chiếu đến nút trên cùng của cơ sở dữ liệu JSON
         database = FirebaseDatabase.getInstance().getReference("User").orderByChild("point");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -63,7 +64,7 @@ public class RankingActivity extends AppCompatActivity {
             }
         });
 
-        //Back
+        //Quay lai trang home
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

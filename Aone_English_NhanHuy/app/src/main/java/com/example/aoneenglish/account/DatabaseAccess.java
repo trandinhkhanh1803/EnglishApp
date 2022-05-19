@@ -46,7 +46,7 @@ public class DatabaseAccess {
             this.db.close();
         }
     }
-
+// them nguoi dung vao firebase
     public Boolean insertData(String iduser, String hoten, String email, String sdt, int diem) {
         db = openHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

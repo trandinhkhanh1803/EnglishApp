@@ -32,7 +32,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         btnResetP = (Button) findViewById(R.id.btnResetPass);
 
         mAuth = FirebaseAuth.getInstance();
-
+//bat su kien
         btnResetP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
     private void resetPassword() {
         String email = EmailF.getText().toString().trim();
-
+// kiem tra email
         if (email.isEmpty()) {
             EmailF.setError("Please enter your Email!");
             EmailF.requestFocus();
@@ -54,7 +54,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             EmailF.setError("Please enter correct Email!");
             EmailF.requestFocus();
         }
-
+// gui email xac thuc den firebase
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

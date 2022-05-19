@@ -37,7 +37,7 @@ public class Finish_Quiz_LS_Activity extends AppCompatActivity {
 
         Anhxa();
 
-
+// kiem tra so cau tra loi dung
         if(questiontrue==4){
             txtfinalqtrue.setText(questiontrue + " / " + qcount);
             txtcongrats.setText("Your final result: ");
@@ -50,6 +50,7 @@ public class Finish_Quiz_LS_Activity extends AppCompatActivity {
             txtfinaltext.setText("Good luck next time !!");
             txtfinalScore.setText(" "+score);
         }
+        // quay lai trang home
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

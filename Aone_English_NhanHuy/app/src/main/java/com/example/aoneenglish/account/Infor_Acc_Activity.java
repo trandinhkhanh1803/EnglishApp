@@ -33,7 +33,7 @@ public class Infor_Acc_Activity extends AppCompatActivity {
         AnhXa();
         iduser = DB.iduser;
         LayUser();
-
+//bat su kien
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +42,7 @@ public class Infor_Acc_Activity extends AppCompatActivity {
         });
 
     }
-
+// anh xa id
     private void AnhXa() {
         tvHoten = findViewById(R.id.textIntEdtHoten);
         tvEmail = findViewById(R.id.textIntEdtEmail);
@@ -57,7 +57,7 @@ public class Infor_Acc_Activity extends AppCompatActivity {
         tvEmail.setEnabled(false);
 
     }
-
+// ham cap nhat thong tin vao database
     private void CapNhatThongTin() {
         String hoten = tvHoten.getText().toString();
         String sdt = tvSdt.getText().toString();
@@ -73,9 +73,9 @@ public class Infor_Acc_Activity extends AppCompatActivity {
         }
 
     }
-    
+    //Truyền thông tin
     private void TruyenThongTin() {
-        //Truyền thông tin
+
         tvHoten.setText(user.getHoTen());
         tvTen.setText(user.getHoTen());
         tvtaikhoan.setText(user.getEmail());
@@ -85,7 +85,7 @@ public class Infor_Acc_Activity extends AppCompatActivity {
         tvUID.setText(user.getIduser());
 
     }
-
+// Lay thong tin user tu db
     public void LayUser() {
         database = Database.initDatabase(Infor_Acc_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM User WHERE ID_User = ?", new String[]{String.valueOf(DB.iduser)});

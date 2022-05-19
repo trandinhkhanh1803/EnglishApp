@@ -52,6 +52,7 @@ public class Finish_Learning_VC_Activity extends AppCompatActivity {
             txtfinaltext.setText("Good luck next time !!");
             txtfinalScore.setText(" "+score);
         }
+        //quay lai trang home
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

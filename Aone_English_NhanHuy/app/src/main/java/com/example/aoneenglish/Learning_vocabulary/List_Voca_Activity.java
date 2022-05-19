@@ -34,7 +34,7 @@ public class List_Voca_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
-
+// nhan tu vung tu Learning_Voca_Activity
         Intent intent = getIntent();
         idbo = intent.getIntExtra("idbo", 0);
 
@@ -61,7 +61,6 @@ public class List_Voca_Activity extends AppCompatActivity {
         Ontap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent ontap = new Intent(List_Voca_Activity.this, Word_Matters_Activity.class);
                 ontap.putExtra("idbo", idbo);
                 startActivity(ontap);
@@ -70,7 +69,7 @@ public class List_Voca_Activity extends AppCompatActivity {
 
 
     }
-
+// them tu vung
     private void AddArrayTV() {
         database = Database.initDatabase(List_Voca_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM TuVung WHERE ID_Bo = ?", new String[]{String.valueOf(idbo)});

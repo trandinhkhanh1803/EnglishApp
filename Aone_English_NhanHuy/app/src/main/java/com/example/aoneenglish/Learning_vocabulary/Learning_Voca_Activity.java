@@ -48,6 +48,7 @@ public class Learning_Voca_Activity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 idbo = boTuVungs.get(position).getIdBo();
+                //lay tu vung tu database gui den List_Voca_Activity
                 Intent dstv = new Intent(Learning_Voca_Activity.this, List_Voca_Activity.class);
                 dstv.putExtra("idbo", idbo);
                 startActivity(dstv);
@@ -64,7 +65,7 @@ public class Learning_Voca_Activity extends AppCompatActivity {
             }
         });
     }
-
+// them tu vung vao database
     private void AddArrayBTV(){
         database = Database.initDatabase(Learning_Voca_Activity.this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM BoCauHoi",null);
